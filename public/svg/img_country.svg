@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.01" height="20.97" viewBox="0 0 32.01 20.97" id="img_country">
+	<path fill="#ADCCE9" d="M32.01 18.96c0 1.11-.9 2.01-2 2.01h-28.01c-1.1 0-2-.91-2-2.01v-4.98h32.01v4.98z"/>
+	<path fill="#fff" d="M.01 6.98h31.98v7h-31.98z"/>
+	<path fill="#ADCCE9" d="M32.01 6.99h-32.01v-4.98c0-1.1.9-2.01 2-2.01h28.01c1.1 0 2 .91 2 2.01v4.98z"/>
+</svg>

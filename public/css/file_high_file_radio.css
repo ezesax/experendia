@@ -1,0 +1,13 @@
+::placeholder {
+  color: #c4c7c9;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #f00;
+}
+::-ms-input-placeholder {
+  color: #f00;
+}
+input[type='radio'] + label:before {
+  float: left;
+}

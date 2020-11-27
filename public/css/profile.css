@@ -1,0 +1,769 @@
+.name-user_head {
+  color: #fff;
+  margin: 22px 0 0 0;
+  font-size: 14px;
+  text-align: right;
+}
+.name-user_head a {
+  text-decoration: none;
+  color: #fff;
+}
+.btns-profile-col-left {
+  overflow: hidden;
+  width: 100%;
+  font-size: 14px;
+}
+.btns-profile-col-left a {
+  border-radius: 4px;
+  color: #212529;
+  width: 100%;
+  display: inline-block;
+  padding: 5px 15px;
+}
+.btns-profile-col-left :hover {
+  background: #e8eaeb;
+  display: inline-block;
+}
+.cnt-follow {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin: 10px 0 0 0;
+}
+.btn-follow {
+  float: right;
+  font-size: 14px;
+  border: 1px solid #22b37f;
+  border-radius: 4px;
+  margin: -5px 0 0 0;
+}
+.btn-follow a {
+  padding: 7px 18px;
+  text-decoration: none;
+  color: #22b37f;
+  width: 100%;
+  display: inline-block;
+}
+.cnt-btn-green {
+  background-color: #22b37f;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  width: max-content;
+}
+.cnt-btn-green a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 7px 18px;
+}
+.cnt-btn-green :hover {
+  background-color: #28d094;
+  transition: 1s;
+}
+.margin-right-30 {
+  margin: 0 30px 0 0;
+}
+.text-width {
+  width: 50%;
+  float: left;
+  line-height: 20px;
+}
+.width-100 {
+  width: 100%;
+}
+.text-blue_profile {
+  color: #0094c9;
+}
+.text-57 {
+  font-size: 57px;
+}
+.text-31 {
+  font-size: 31px;
+}
+.cnt-level {
+  background: #d7e6fa;
+  border-radius: 4px 4px 0 0;
+  font-size: 18px;
+  overflow: hidden;
+  padding: 15px 15px 100px 15px;
+  width: 100%;
+  margin: auto;
+}
+.point-level {
+  border-right: 1px solid #dbdcdb;
+  border-left: 1px solid #dbdcdb;
+  border-top: 0;
+  border-bottom: 1px solid #dbdcdb;
+  background: #fff;
+  font-size: 14px;
+  color: #0094c9;
+  height: 125px;
+  text-align: center;
+  padding: 90px 0 0 0;
+  border-radius: 0 0 4px 4px;
+}
+.point-level a {
+  color: #21b27f;
+}
+.cnt-squere-point {
+  overflow: hidden;
+  position: relative;
+  top: -202px;
+  margin: auto;
+  width: 318px;
+}
+.cnt-squere-point .squeres {
+  width: 100px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #dbdcdb;
+  float: left;
+  margin: 0 0 0 9px;
+  font-size: 14px;
+  color: #2d3c3f;
+  text-align: center;
+  padding: 20px 0;
+}
+.cnt-squere-point .squeres:first-child {
+  margin: 0;
+}
+::placeholder {
+  color: #c4c7c9;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #f00;
+}
+::-ms-input-placeholder {
+  color: #f00;
+}
+input[type='radio'] + label:before {
+  float: left;
+}
+.load_knowledge {
+  border-radius: 18px;
+  border: 1px solid #718081;
+  padding: 7px 20px;
+  text-align: left;
+  margin: 0 0 7px 0;
+  color: #718081;
+}
+.icon-delete {
+  float: right;
+  font-size: 25px;
+  line-height: 18px;
+  margin: 3px 0 0 0;
+}
+.icon-delete a {
+  overflow: hidden;
+  display: inline-block;
+  color: #718081;
+  text-decoration: none;
+}
+.cnt-list-total-points {
+  overflow: hidden;
+  border-bottom: 2px dotted #c4c6c8;
+  padding: 20px 0;
+}
+.cnt-list-total-points:first-child {
+  border: 0;
+  padding: 0;
+}
+.cnt-list-total-points:last-child {
+  border: 0;
+}
+.col-concept {
+  float: left;
+  width: 60%;
+  text-align: left;
+}
+.col-quantity {
+  float: left;
+  width: 15%;
+  text-align: center;
+}
+.col-quantity .quantity-point {
+  border-radius: 15px;
+  border: 1px solid #e3e3e3;
+  width: 100%;
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  padding: 2px 0;
+}
+.col-point {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.icon_qualify {
+  float: left;
+  margin: 0 5px 0 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 25px;
+  background: url("../svg/start.svg") #dbe4e4 no-repeat 1px 1px;
+}
+.icon_qualify a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.icon_qualify:hover {
+  background: url("../svg/start.svg") #c9463b no-repeat 1px 1px;
+}
+.btn-exp-user {
+  font-size: 14px;
+  color: #879196;
+  padding: 0 40px 10px 0;
+  border-bottom: 2px solid #e3e3e3;
+  background: #fff;
+}
+.btn-exp-user a {
+  text-decoration: none;
+}
+.btn-exp-user:hover {
+  color: #273d40;
+  text-decoration: none;
+}
+.btn-exp-user.active-user {
+  color: #273d40;
+  border-bottom: 2px solid #22b37f;
+}
+.filter-branch {
+  float: left;
+  font-size: 14px;
+  color: #343a40;
+  padding: 8px 15px;
+  border: 0;
+  width: 140px;
+  text-align: left;
+  background: #fff;
+  border-radius: 4px;
+  outline: none !important;
+}
+.btn-channel-user {
+  color: #21b27f;
+  font-size: 14px;
+  background: none;
+  border: 0;
+  width: 140px;
+  text-align: right;
+  padding: 0;
+  outline: none;
+}
+.cnt-btn-report {
+  width: 10px;
+  margin: 5px 0 7px 0;
+  float: right;
+  cursor: pointer;
+}
+.text_quantity_exp {
+  margin: 15px 0 0 0;
+  float: left;
+  border: 1px solid #f00;
+}
+.cnt-btn-comp-profile {
+  background-color: #22b37f;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  width: max-content;
+}
+.cnt-btn-comp-profile a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 7px 18px;
+}
+.cnt-btn-comp-profile :hover {
+  background-color: #28d094;
+  transition: 1s;
+}
+.padding-my-exp {
+  padding: 12px 0 0 0;
+}
+input[readonly] {
+  color: #343a40;
+}
+@media (min-width: 320px) {
+  .margin-right-30 {
+    margin: 0 10px 0 0;
+  }
+  .cnt-btn-green {
+    margin: auto;
+  }
+  .cnt-btn-green.btn-see {
+    margin: -6px 30px 0 0;
+  }
+  .width-100 {
+    width: auto;
+  }
+  .btns-view-dash {
+    width: 100%;
+    padding: 0 0 0 40px;
+    float: left;
+  }
+  .head_row-profile {
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #e3e3e3;
+    padding: 15px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .picture-profile {
+    width: 65px;
+    height: 65px;
+    float: left;
+  }
+  .picture-profile.photo-up-profile {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    float: inherit;
+  }
+  .photo-profile-user {
+    width: 50px;
+    height: 50px;
+    margin: 5px 15px 20px 0;
+    float: left;
+  }
+  .name-country-user {
+    float: left;
+    margin: 5px 0 0 15px;
+  }
+  .name-country-user .img_country {
+    margin: 10px 0 0 0;
+  }
+  .cnt-col-date-head {
+    float: inherit;
+    margin: auto;
+    overflow: hidden;
+    width: max-content;
+    clear: both;
+    padding: 15px 0;
+  }
+  .col-date-head {
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px 10px 0 8px;
+    border-right: 1px solid #dcdcdc;
+  }
+  .margin-svg-date {
+    margin: 0;
+  }
+  .text-28 {
+    font-size: 20px;
+  }
+  .col-date-head:last-child {
+    border: 0;
+  }
+  .percentage_profile {
+    float: left;
+    width: 100%;
+    padding: 25px 0 10px 0;
+    margin: 0;
+    background: url("../svg/bg_percentage.svg") no-repeat center 0;
+  }
+  .legend-complet-profile {
+    float: left;
+    width: 100%;
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+  }
+  .cnt-bg-blue {
+    padding: 20px;
+    border-radius: 0;
+    border: 1px solid #bdc9da;
+    background: #ecf1f5;
+    overflow: hidden;
+    margin: 0 0 5px 0;
+  }
+  .quantity_exp {
+    float: right;
+    font-size: 47px;
+    color: #879196;
+    font-weight: bold;
+    margin: -16px 0 0 0;
+  }
+  .btns-exp-view {
+    float: left;
+    padding: 30px 0 0 45px;
+  }
+  .cnt-bg-white-middle {
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0 0 5px 0;
+    width: 100%;
+    float: left;
+  }
+  .cnt-bg-white-middle:last-child {
+    margin: 0 0 5px 0;
+    float: right;
+  }
+  .img-svg-dash {
+    float: left;
+  }
+  .text-follow {
+    float: left;
+    line-height: 18px;
+    margin: 0 0 0 15px;
+  }
+  .cnt-middle {
+    padding: 15px 0 0 0;
+  }
+  .btn-up-green {
+    float: right;
+    border: 1px solid #22b37f;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .btn-up-green a {
+    display: inline-block;
+    width: 100%;
+    color: #22b37f;
+    text-decoration: none;
+    padding: 5px 15px;
+  }
+  .btn-delete-img-profile {
+    border: 1px solid #22b37f;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 58%;
+    top: 12%;
+    border-radius: 18px;
+    text-align: center;
+    background: #fff;
+  }
+  .btn-delete-img-profile a {
+    display: inline-block;
+    width: 100%;
+  }
+  .btn-delete-img-profile :hover {
+    color: #21b27f;
+    text-decoration: none;
+  }
+  .btn-follow a {
+    padding: 7px 18px;
+  }
+  .col-concept {
+    width: 43%;
+  }
+  .col-quantity {
+    width: 22%;
+  }
+  .col-point {
+    width: 35%;
+  }
+  .cnt-acc-user {
+    padding: 15px 15px 0px 15px;
+    background: #fff;
+    border-radius: 4px;
+    margin: 0 0 5px 0;
+    width: 100%;
+    display: inline-block;
+  }
+  .cnt-col-follow {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+  }
+  .cnt-col-follow:nth-child(2n+1) {
+    float: right;
+  }
+  .cnt-col-follow:nth-child(2n) {
+    float: left;
+  }
+  .btn-nav_mobile {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    margin: 15px 0 0 0;
+    color: #343a40;
+    font-size: 14px;
+  }
+  .btn-nav_mobile a {
+    padding: 0 0 0 20px;
+    color: #879196;
+    font-size: 14px;
+  }
+  .btn-nav_mobile::-webkit-scrollbar {
+    display: none;
+  }
+  .btn_panel_user {
+    color: #21b27f;
+  }
+  .btn_panel_user a {
+    text-decoration: none;
+  }
+  .btn_panel_user:hover {
+    color: #21b27f;
+    text-decoration: none;
+  }
+  .cnt_all_channels {
+    float: left;
+    width: 180px;
+    background: #fff;
+  }
+  .cnt_all_channels.all_channel_profile_p {
+    width: 100%;
+  }
+  .cnt_actions_head_exp {
+    width: 100%;
+    float: left;
+    padding: 0 15px;
+    margin: 0 0 10px 0;
+  }
+  .cnt_btns_close_sesion {
+    background: #fff;
+    padding: 15px 0 10px 0;
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    margin: 16px 0 0 0;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.14);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.14);
+    display: none;
+  }
+  .btn_profile_user {
+    font-size: 16px;
+  }
+  .btn_profile_user a {
+    text-decoration: none;
+    color: #3b4244;
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .btn_close_session {
+    color: #22b37f;
+    text-align: left;
+  }
+  .btn_close_session a {
+    color: #22b37f;
+    font-size: 13px;
+    padding: 17px 10px 15px 25px;
+    width: 100%;
+    display: inline-block;
+  }
+  .btn_close_session :hover {
+    text-decoration: none;
+    background: #f0f5f5;
+  }
+}
+.margin-right-30 {
+  margin: 0 10px 0 0;
+}
+.channel_mobile {
+  outline: none;
+  padding: 8px 10px;
+  width: 100%;
+  text-align: left;
+}
+.cnt-btn-comp-profile {
+  margin: auto;
+  width: 100%;
+}
+.cnt-btn-comp-profile.btn-see {
+  margin: -6px 30px 0 0;
+}
+.txt_channel {
+  text-align: center;
+}
+.cnt-middle-public {
+  padding: 15px 0 40px 0;
+}
+.padding-my-exp {
+  padding: 12px 0 0 0;
+}
+@media (min-width: 576px) {
+  .txt_channel {
+    text-align: left;
+  }
+  .btn-up-green {
+    float: inherit;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .btn-follow a {
+    padding: 7px 18px;
+  }
+  .btn-delete-img-profile {
+    left: 55%;
+    top: 12%;
+  }
+  .cnt-acc-user {
+    padding: 30px 30px 0 30px;
+  }
+  .cnt-col-date-head {
+    float: left;
+    clear: initial;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+  .cnt-col-follow {
+    width: 48%;
+  }
+  .cnt-bg-blue {
+    padding: 40px 20px 20px 20px;
+    border-radius: 4px;
+  }
+  .quantity_exp {
+    float: left;
+    text-align: center;
+  }
+  .btns-exp-view {
+    float: right;
+    padding: 0;
+  }
+  .cnt-bg-white-middle {
+    width: 49.5%;
+  }
+  .cnt-bg-white-middle:last-child {
+    margin: 0;
+  }
+  .img-svg-dash {
+    width: 100%;
+    margin: 5px 0 0 0;
+  }
+  .text-follow {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+    line-height: 22px;
+  }
+  .cnt-btn-comp-profile {
+    margin: auto;
+    width: 161px;
+  }
+  .channel_mobile {
+    padding: 8px 15px;
+  }
+  .cnt_all_channels {
+    float: left;
+    width: 190px;
+  }
+  .cnt_all_channels.all_channel_profile_p {
+    width: 245px;
+    text-align: left !important;
+  }
+  .width-100 {
+    width: 100%;
+  }
+  .btns-view-dash {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .padding-my-exp {
+    padding: 0 0 0 0;
+  }
+  .percentage_profile {
+    width: 210px;
+    margin: 10px 35px 0 22px;
+  }
+  .legend-complet-profile {
+    width: 250px;
+    margin: 25px 0 0 0;
+    float: right;
+  }
+}
+@media (min-width: 1024px) {
+  .cnt_actions_head_exp {
+    padding: 0;
+  }
+  .btn-delete-img-profile {
+    left: 80px;
+    top: 10px;
+    padding: 1px 0 0 0;
+  }
+  .cnt-middle {
+    padding: 20px 15%;
+  }
+  .btn-up-green {
+    width: auto;
+    float: right;
+    margin: 30px 0 0 0;
+  }
+  .cnt-middle-public {
+    padding: 20px 15% 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .cnt-btn-green {
+    margin: auto;
+  }
+  .text-width {
+    width: 70%;
+  }
+  .head_row-profile {
+    width: 1200px;
+  }
+  .picture-profile {
+    width: 125px;
+    height: 125px;
+    position: relative;
+  }
+  .picture-profile.photo-up-profile {
+    float: left;
+    margin: 0 0 0 0;
+  }
+  .name-country-user {
+    margin: 20px 0 0 30px;
+  }
+  .name-country-user .img_country {
+    margin: 20px 0 0 0;
+  }
+  .cnt-col-date-head {
+    margin: 25px 0 0 0;
+    float: right;
+  }
+  .col-date-head {
+    float: left;
+    font-size: 16px;
+    padding: 2px 30px;
+  }
+  .margin-svg-date {
+    margin: 5px 0 7px 0;
+  }
+  .text-28 {
+    font-size: 28px;
+  }
+  .percentage_profile {
+    width: 210px;
+    margin: 10px 35px 0 22px;
+  }
+  .legend-complet-profile {
+    width: 250px;
+    margin: 25px 0 0 0;
+  }
+  .cnt-bg-blue {
+    padding: 40px 70px 20px 70px;
+    border-radius: 4px;
+  }
+}

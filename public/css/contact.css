@@ -1,0 +1,123 @@
+.cnt_main_contact {
+  background: #fff;
+  overflow: hidden;
+  padding: 15px;
+  margin: 0 0 40px 0;
+}
+.new_footer {
+  color: #9faaaf;
+  padding: 0 25px;
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+}
+.style_select_themme {
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 14px;
+  color: #b0b9be;
+  padding: 0 10px 6px 10px;
+}
+.list_themmes {
+  color: #869196;
+  font-size: 14px;
+  padding: 15px 10px;
+}
+.cnt_li_themme {
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.42);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.42);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.42);
+}
+.cnt_li_themme li {
+  cursor: pointer;
+  padding: 15px 10px;
+  color: #869196;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 14px;
+}
+.cnt_li_themme li:hover {
+  background: #eff5f5;
+}
+.style_description {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  height: 190px;
+  font-size: 14px;
+  color: #869196;
+}
+.style_description::placeholder {
+  color: #b0b2b4;
+}
+.style_inputs {
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+  font-size: 14px;
+  padding: 0 10px 6px 10px;
+  margin: 0 0 20px 0;
+  color: #869196;
+}
+.style_inputs::placeholder {
+  color: #b0b2b4;
+}
+.style_recaptcha {
+  text-align: center;
+  overflow: hidden;
+  margin: 15px 0 0 0;
+}
+.btns_channels_contact {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  color: #22b37f;
+  text-align: center;
+  width: 92%;
+  float: left;
+  padding: 25px 0;
+  font-size: 18px;
+  margin: 0 4% 10px 4%;
+}
+.btns_channels_contact a {
+  color: #22b37f;
+  text-decoration: none;
+}
+.padding_messages_send {
+  padding: 0;
+}
+@media (min-width: 576px) {
+  .cnt_main_contact {
+    padding: 50px 100px;
+    margin: 0 0 40px 0;
+  }
+  .style_select_themme {
+    width: 50%;
+    cursor: pointer;
+  }
+  .cnt_li_themme {
+    width: 50%;
+  }
+  .new_footer {
+    padding: 0;
+  }
+  .style_recaptcha {
+    text-align: right;
+  }
+  .btns_channels_contact {
+    width: 32%;
+    margin: 0 2% 0 0;
+  }
+  .btns_channels_contact:last-child {
+    margin: 0;
+  }
+  .padding_messages_send {
+    padding: 50px 0 0 0;
+  }
+}

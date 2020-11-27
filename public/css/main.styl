@@ -1,0 +1,1473 @@
+ul
+  list-style none
+  padding 0
+  margin 0
+
+input[type='radio'] {
+  position:absolute;
+  left: -1000em;
+}
+
+input[type='radio'] + label:before {
+  background: url(../svg/select.svg) no-repeat 0 0;
+  background-size: 17px;
+  content: '';
+  /* display: inline-block; */
+  width: 22px;
+  height: 17px;
+  position: relative;
+  margin:2px 0 0 0;
+  top: 2px;
+  float: right;
+  cursor: pointer;
+}
+
+input[type='radio']:checked + label:before {
+  background: url(../svg/deselect.svg) no-repeat 0 0;
+}
+.label-filter
+  width 100%
+  color #869196
+  cursor pointer
+//agreago recien 12/08/20
+.new_footer
+  color #9FAAAF
+  padding 0 25px
+  text-align center
+  margin auto
+  font-size 14px
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #c8cac8 !important;
+  opacity: 1; /* Firefox */
+}
+
+/****************TEXTOS, COLORES,ESPACIOS*****************/
+.bg-head
+  background-color #103B3E
+.bg-body
+  background-color #F5F7F7
+.color-red
+  background #FF5561
+.color-indigo
+  background #9469A4
+.color-lightseagreen
+  background #62B9CC
+.color-peru
+  background #E48A57
+.color-darkcyan
+  background #5C5190
+.color-date-exp
+  color #b0b2b4
+.text-green
+  color #22B37F
+.text-11
+  font-size 11px
+.text-12
+  font-size 12px
+.text-13
+  font-size 13px
+.text-14
+  font-size 14px
+.text-16
+  font-size 16px
+.text-18
+  font-size 18px
+.text-20
+  font-size 20px
+.text-24
+  font-size 24px
+  line-height 29px
+.text-28
+  font-size 28px
+.text-28-cantact
+  font-size 28px
+.text-30
+  font-size 30px
+.text-title-banner
+  font-size 20px
+  line-height 40px
+.text-banner-index
+  font-size 20px
+.line-height-20
+  line-height 20px
+.line-height-22
+  line-height 22px
+.line-height-35
+  line-height 35px
+.line-height-25
+  line-height 25px
+.line-height-40
+  line-height 40px
+.margin-top-15
+  margin 15px 0 0 0
+.margin-top-30
+  margin 30px 0 30px 0
+.margin-right-10
+  margin 0 10px 0 0
+.margin-bottom-5
+  margin 5px 0 5px 0
+.margin-bottom-20
+  margin 0 0 20px 0
+.margin-footer-main
+  margin 20px 0 15px 0
+.padding-top-10
+  padding 10px 15px 15px 15px
+.padding-20
+  padding 20px
+.padding-top-30
+  padding 30px 0 0 0
+.padding-height-16
+  padding 16px 0
+.padding-left
+  padding 0 0 0 25px
+.padding-btn-comm
+  padding 20px 15px 10px 15px
+.padding-btn-comm-2
+  padding 20px 0px 10px 0px
+.padding-exp-main
+  padding 30px 35px 35px 35px
+.padding-no-exp
+  padding 50px 15px 50px 15px
+  margin 0 0 40px 0
+.country-col-exp
+  float left
+  color #869196
+  font-size 12px
+.select_channel_exp
+  //box-shadow 0px 2px 4px 0px rgba(0, 0, 0, 0.12)
+  border-bottom 1px solid rgba(0,0,0,0.1)
+  height 38px
+  margin 0 0 30px 0
+  color #b0b2b4
+  font-size 16px
+  
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  -webkit-appearance none
+  -moz-appearance none
+  &.icon-arrow-channel
+    background-image linear-gradient(45deg, transparent 50%, #9faaaf 50%), linear-gradient(135deg, #9faaaf 50%, transparent 50%)
+    background-position calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px), 100% 0
+    background-size: 5px 5px, 5px 5px, 2.5em 2.5em
+    background-repeat no-repeat
+.select_channel_exp:valid
+  color #718081 !important
+.select_channel_exp:required
+  color #c8cac8
+  
+select:invalid
+  box-shadow none
+
+
+/****************ESTILOS FORM SEARCH MOBILE*****************/
+.overlay
+  width 94%
+  display none
+  position absolute
+  z-index 1
+  margin 10px 3% 0 3%
+  border-bottom 6px solid #103b3e
+  border-top 6px solid #103b3e
+  &.pop-up
+    height 100%
+    width 100%
+    position fixed
+    z-index 2
+    top 0
+    left 0
+    margin 0
+    background-color white
+    border 0
+  &.search_index_main
+    border 0
+/* The content */
+.overlay-content
+  width 100%
+/* Close button */
+.overlay .closebtn
+  position absolute
+  top 13px
+  left 10px
+  width 20px
+/* Style the search field */
+.overlay input[type=search]
+  padding 0 3px 0 35px
+  font-size 14px
+  height 42px
+  width 100%
+  background #f3f3f3
+  border 0
+  outline none
+  border-radius 4px
+.overlay input[type=search]:hover
+  background white
+  border 0
+  
+
+/***********************BOTONES***************************/
+.btn-more-themmes
+  font-size 20px
+  margin 0 0 30px 0
+  a
+    border-radius 16px
+    border 1px dotted #CDD2D2
+    text-decoration none
+    color #22B37F
+    display inline-block
+    width 100%
+    &:hover
+      border 1px dotted #21B27F
+.btns-rrss
+  width 32px
+  height 30px
+  a
+    text-decoration none
+    display inline-block
+    width 100%
+    height 100%
+  &:hover
+    opacity 0.7
+.btn-qualification-exp
+  font-size 13px
+  padding 3px 10px
+  cursor pointer
+  margin 0px 10px 0 30px
+  &.btn_not_actions
+    &:hover
+      cursor text
+      background none
+  a
+    text-decoration none
+    color #869196
+  &:hover
+    background #eef5f5
+    border-radius 20px
+    padding 3px 10px
+  &.link-none-exp_value
+    cursor inherit
+    &:hover
+      background none
+.btn-message-exp
+  font-size 13px
+  padding 3px 10px
+  cursor pointer
+  position relative
+  left 10px
+  &.btn_not_actions
+    &:hover
+      cursor text
+      background none
+  &.btn-comment-exp
+    left -12px
+  &.btn-express
+    left 12px
+  a
+    text-decoration none
+    color #869196
+  &:hover
+    background #eef5f5
+    border-radius 20px
+    padding 3px 10px
+  &.link-none-exp_comment
+    cursor inherit
+    &:hover
+      background none
+.btn_exp_ques
+  margin 0px 20px 0px 20px
+  font-size 16px
+  color #869196
+  /*a
+    text-decoration none
+    width 100%
+    display inline-block
+    color #869196
+    border-bottom 1px solid #E3E3E3
+  :hover
+    cursor pointer
+    font-weight bold
+    color #21B27F 
+    border-bottom 1px solid #22B37F
+    width 100% 
+    display inline-block*/
+    
+.btn-detail_img
+  color #343a40
+  display inline-block
+  width 100%
+  a
+    text-decoration none
+  &:hover
+    color #343a40
+
+.btn-read_more
+  position absolute
+  bottom 0
+  right 0
+  background white
+  color #343a40
+  padding 0 5px 0 0
+
+.actions_report_exp
+  background #fff
+  width 335px
+  //margin 35px 0px 0 -284px
+  z-index 1
+  position absolute
+  line-height 16px
+  box-shadow 0px 0px 10px -2px
+  border-radius 5px
+  padding 15px 0 8px 0
+  &.report-acc-profile
+    width 335px
+    margin 35px 0px 0 0
+  &.filter_brands
+    margin 35px 0 0 -164px
+    width 340px
+    padding 0
+    .btn-filter
+      float left
+  a
+    text-decoration none
+    display inline-block
+    width 100%
+    color #3A4144
+    padding 10px
+    border-bottom 1px solid #E2E3E3
+    margin -3px 0 0 0
+    &:hover
+      background #F0F5F5
+  a:last-child
+    border-bottom 0
+  .msg_report
+    //width 270px
+    width 86%
+    float right
+.cnt-btn-register-mob
+  color #21b27f
+  font-size 16px
+  border-bottom 1px solid #E2E2E2
+  margin 0 0 13px 0
+  a
+    text-decoration none
+    color #21b27f
+    width 100%
+    display inline-block
+    padding 15px 0
+    &:hover
+      background #F0F5F5
+.cnt-btn-register-mob-exit
+  color #21b27f
+  font-size 16px
+  border-bottom 1px solid #E2E2E2
+  margin 0 0 13px 0
+  a
+    text-decoration none
+    color #21b27f
+    width 100%
+    display inline-block
+    padding 5px 0
+    &:hover
+      background #F0F5F5
+      border-radius 40px
+.btn-register
+  width 112px
+  margin auto
+.btn-enter
+  width 91px
+  margin auto
+.btn_read_exp
+  text-align center
+  font-size 14px
+  a
+    color #21b27f
+    width 100%
+    display inline-block
+    //background #4399D7
+    text-decoration none
+    padding 9px 0
+    border-radius 4px
+    border 1px solid #21b27f
+    &:hover
+      transition 0.3s
+      color #28d094
+      border 1px solid #28d094
+      box-shadow inset 0 0 0 1px #28d094
+      //background #22b37f
+.cnt_btns_center_message
+  width auto
+  margin 40px 15px
+  overflow hidden
+.btn_no_bg
+  float left
+  width 100%
+  margin 0 0 10px 0
+  text-align center
+  a
+    width 100%
+    border 1px solid #22B27F
+    border-radius 4px
+    padding 6px 15px
+    color #22B27F !important
+    text-decoration none
+    display inline-block
+      
+.btn-publish
+  float right
+  text-align center
+  a
+    background #22b37f
+    color white
+    display inline-block
+    width 100%
+    text-decoration none
+    padding 7px 0
+    border-radius 4px
+  :hover
+    background #28d094
+    transition 1s
+  button
+    border 0
+    background #22b37f
+    color white
+    display inline-block
+    width 100%
+    text-decoration none
+    padding 7px 0
+    border-radius 4px
+    :hover
+      background #28d094
+      transition 1s
+&.send_solicitude
+   width 100%
+.btn-cancel_clean
+  width 10%
+  float left
+  color #21b27f
+  cursor pointer
+  text-align center
+  a
+    padding 6px 0
+    //border 1px solid #22b37f
+    width 100%
+    display inline-block
+.btn_aggrege
+  color #dadada
+  border-radius 4px
+  border-top 1px solid #D9D9D9
+  box-shadow 0px 4px 6px 0px
+  margin -15px 0 20px 0
+  a
+    padding 6px 0
+    color #22B37F
+    text-decoration none
+    width 100%
+    display inline-block
+
+/************** EMPIEZA CABECERA Y BANNER ****************/
+header
+  width 1280px
+.btn-channel
+  color #21B27F
+  font-size 13px
+  background none
+  border 0
+  width 147px
+  text-align right
+  padding 0
+  a
+    background none
+.btn-channel-main
+  color #21B27F
+  font-size 13px
+  background none
+  border 0
+  width 147px
+  text-align left
+  padding 0
+  a
+    background none
+.btn-subchannel
+  background white
+  color #21B27F
+  font-size 14px
+  text-align right
+  padding 10px 10px
+  border-bottom 1px solid #E2E3E3
+.cnt-search
+  width 100%
+  margin 20px 0 0 0
+  input
+    width 98%
+    background #1E494C
+    //background white
+    border 0
+    border-radius 4px
+    height 36px
+    color #263D3F
+    padding 0 5% 0 2%
+    font-size 14px
+  input:focus
+    background white
+    outline none
+  button
+    background none
+    border 0
+    float right
+    position relative
+    z-index 1
+    top -25px
+    right 25px
+    padding 0
+  button:focus
+    outline none
+.cnt-btn-head
+  color white
+  margin 25px 0 0 0
+  font-size 14px
+  text-align right
+  padding 0 3% 0 0
+  a
+    text-decoration none
+    color white
+  :hover
+    text-decoration underline
+.cnt-btn-publish
+  background-color #22B37F
+  text-align center
+  color white
+  border-radius 4px
+  font-weight 500
+  margin 20px 0 0 40px
+  font-size 16px
+  padding 4px 16px 5px 16px
+  float left
+  a
+  &:hover
+    color white
+    text-decoration none
+    border-radius 4px
+    background-color #28d094
+    //padding 4px 16px 5px 16px
+    transition 1s
+.bg-img-banner
+  background url(../images/banner.gif) no-repeat right
+  width 1275px
+  height 141px
+.bg-img-banner-brands
+  background url(../images/banner-brands-d.gif) no-repeat right
+  width 1275px
+  height 141px
+.bg-img-banner-knowledge
+  background url(../images/banner-knowledge-d.gif) no-repeat right
+  width 1275px
+  height 141px
+.close_banner
+  margin 10px 0 0 0
+  color #879196
+  font-size 20px
+  a
+    padding 0px 7px 1px 7px
+  :hover
+    padding 0px 7px 1px 7px
+    background #EEF5F5
+    border-radius 15px
+    
+.cnt-div-burger-head
+  background white
+  padding 0 15px 40px 15px
+  display none
+  width 100%
+  position absolute
+  z-index 2
+  border-bottom 1px solid #dee2e6
+  box-shadow 0px 8px 12px -10px
+.btn-channel-main
+  color #21B27F
+  font-size 13px
+  background none
+  border 0
+  width 147px
+  text-align left
+  padding 0
+  a
+    background none
+   
+/************** EMPIEZA CONTENIDO ****************/
+.cnt-themmes_featured
+  width 225px
+  float right
+  margin 24px 35px 0 0
+.title_themmes_featured
+  background #DCEBFA
+  color #4499D8
+  font-size 16px
+  padding 7px 0 7px 14px
+  border-radius 4px
+  margin 0 0 10px 0
+.title_featured_file
+  //width 100%
+  display block
+  text-align left
+  color #869196
+  margin 35px 0 15px 15px
+  font-size 18px
+.bg_c_letters
+  width 34px
+  height 34px
+  padding 6px 0 0 0px
+  text-align center
+  border-radius 20px
+  float left
+  color white
+  font-size 14px
+.bg_c_themmes
+  border 1px solid #E3E3E3
+  background white
+  padding 5px 8px
+  border-radius 16px
+  font-size 14px
+  color #3A4144
+  margin 0 0 10px 0
+  cursor pointer
+  text-align left
+  a
+    text-decoration none
+    color #3A4144
+    display inline-block
+    width 100%
+  &:hover
+    color white !important
+.cnt-col-aside
+  width 336px
+  margin 24px 0 0 35px
+  overflow hidden
+  .banner-aside
+    background #DCEBFA
+    text-align center
+    border-radius 4px
+    font-size 16px
+    padding 10px 10px 0 10px
+    line-height 20px 
+  .btn-banner-r
+    padding 7px 18px
+    background #22B37F
+    border 0
+    margin 10px 0 25px 0
+    a
+      border 0
+    &:hover
+      background #28d094
+      transition 1s
+.cnt-expendia-featured
+  border 1px solid #E3E3E3
+  border-radius 4px
+  background white
+  overflow hidden
+  color #3A4144
+  margin 0 0 8px 0
+.btn-green
+  width 100%
+  background #22B37F
+  border 0
+  margin 20px 0
+  padding 7px 0
+  color white
+  border-radius 4px
+  a
+    border 0
+    color white
+  &:hover
+    background #28d094
+    transition 1s
+  
+/************** SVG ****************/
+.icons-action-report-popup
+  float left
+  margin 3px 0 0 5px
+.icon-report_content
+  float left
+  margin 3px 0 0 7px
+.icon-view
+  float left
+  width 18px
+  height 12px
+  margin 3px 5px 0 0
+.icon-qualification
+  float left
+  margin 1px 5px 0 0
+.icon-message
+  float left
+  margin 3px 5px 0 0
+.close-win-search
+  float right
+  width 11px
+  height 16px
+  margin 1px 4px 0 0
+.icon-register
+  float left
+  margin 2px 15px 0 0
+.icon-enter
+  float left
+  margin 0 15px 0 0
+.icon-order
+  float left
+  margin-top 6px
+.icon-filter
+  float left
+  margin-top 6px
+.close-po-up
+  float left
+  margin 6px 12px 0 12px
+.icon-fundator
+  float left
+  margin 0 0 0 5px
+.icon-share
+  float left
+  margin 2px 5px 0 0
+.icon-respond
+  float left
+  margin 18px 10px 0 0
+  
+.photo-profile
+  float left
+  width 38px
+  height 38px
+  margin 10px 15px 0 0
+  border-radius 20px
+  border 1px solid white
+  background #d1dbdb
+.name-profile
+  float left
+  /*width 400px*/
+  padding 10px 0
+  font-size 14px
+  a
+    color #343a40
+    text-decoration none
+    &:hover
+      text-decoration underline
+.photo-profile_featured
+  float left
+  width 67px
+  height 61px
+  padding 0 0 0 15px
+  background #E9F0F5
+.name-profile_featured
+  float left
+  //width 267px
+  padding 10px 0
+  font-size 14px
+  background #E9F0F5
+  a
+    color #343a40
+    text-decoration none
+    &:hover
+      text-decoration underline
+.featured-title-experendia
+  padding 15px
+  float left
+  line-height 18px
+.cnt-btn-agregge-report
+  width auto
+  margin 9px 0 0 0
+  .agregge-friend
+    float left
+    margin 2px 10px 0 0
+    padding 7px 3px 0px 5px
+    a
+      text-decoration none
+      display inline-block
+      width 100%
+      height 100%
+    &:hover
+      background #EEF5F5
+      //padding 0px 7px 1px 7px
+      border-radius 15px  
+  .report-spam
+    float left
+    width 10px
+    //height 16px
+    //background-position -37px -64px
+    text-align center
+    margin 3px 0 0 0
+    cursor pointer
+    
+.content-description
+  margin 8px 0 0 0
+  a
+    color #343a40
+    text-decoration none
+.content-description-exp-img
+  margin 8px 0 0 0
+  width 358px
+.text-cut-points1
+  height 40px
+  text-overflow ellipsis
+  overflow hidden
+  margin 8px 0 10px 0
+  position relative
+.text-cut-points2
+  height 110px
+  text-overflow ellipsis
+  overflow hidden
+  position relative
+.text-cut-points3
+  height 48px
+  text-overflow ellipsis
+  overflow hidden
+  margin 8px 0 10px 0
+  position relative
+.pic_file
+  width 100%
+  margin 30px 0
+  img
+    width 100%
+.img-cont-exp
+  width 146px
+  height 96px
+  background #f5f7f7
+  margin 5px 0 0 20px
+  border-radius 4px
+  img
+    width 100%
+    height 100%
+.glass_search
+  margin 0 -5px 0 0
+  float right
+  a
+    text-decoration none
+    width 100%
+    height 100%
+    display inline-block
+.btn-burger
+   margin 23px 15px 0 0
+   float right
+   a
+     text-decoration none
+     width 100%
+     height 100%
+     display inline-block
+     
+.cnt-radio-button
+  width 100%
+  
+.cnt-pop-pup
+  padding 0 40px
+  margin 20px 0 0 0
+     
+.style-radio-sider
+  border-bottom 1px solid #E2E2E2
+  font-size 14px
+  padding 12px 0 0 0
+.style-radio-sider:last-child
+  border 0
+  margin 0 0 20px 0
+.btn-tag-D
+  font-size 14px
+  margin 0 5px 5px 0
+  a
+    color #869196 !important
+    text-decoration none
+    display inline-block
+    padding 5px 13px
+    border 1px solid #E2E2E2
+    border-radius 16px
+    margin 0 5px 7px 0
+    &:hover
+      color #3A4144
+      background #D6E5F4
+.tag_register_interests
+  width 100%
+  border 1px solid #718081
+  border-radius 18px
+  font-size 16px
+  margin 0 0 10px 0
+  a
+    padding 6px 12px
+    color #718081
+    display inline-block
+    width 100%
+    text-decoration none
+  
+.btn-tag-exp
+  color #21B27F
+  a
+    text-decoration none
+    color #21B27F
+  &:hover
+    color #21B27F !important
+    text-decoration underline
+.themmes-tag
+  font-size 16px 
+  color #3A4144
+  margin 5px 0 0 0
+.tag-father
+  font-size 14px
+  margin 15px 0
+  position relative
+  z-index 1
+  a
+    border-radius 16px
+    padding 7px 15px
+    border 1px solid #E2E2E2
+    background white
+    color #4499D8
+    text-decoration none
+.line-tag-father
+  position relative
+  border-bottom 1px solid #E2E2E2
+  z-index 0
+  top 25px
+  height 0
+
+.cnt-order-filter
+  width 100%
+  padding 0 15px
+  a
+    color #4499d8
+    text-decoration none
+  
+.bg-head-popup
+  background #263C3F
+  color white
+  padding 20px 0
+  font-size 19px
+.cnt-btn-filter-M
+  width 100%
+  
+.delete-tag-m
+  font-size 18px
+  height 8px
+  float right
+  margin -2px 0 0 0
+  color #718081
+.exp-feat
+  background white
+  border-radius 4px
+  border 1px solid #E2E2E2
+  margin 0 5px 0 0
+  //width 276px
+.exp-feat:last-child
+  margin 0
+.input_login
+  border 0
+  border-bottom 1px solid rgba(0, 0, 0, 0.1)  
+  font-size 16px
+  color #718081
+  width 100%
+  padding 0 6% 0 2%
+  margin 0 0 30px 0
+  option:not(:checked)
+    color #c6c6c6
+.input_login:focus
+  outline none !important
+.input_login::placeholder
+  color #c8cac8
+  opacity 1
+  
+ 
+.bg-img-login
+  height 840px
+  width 1190px
+  background url(../images/bg_body.gif) no-repeat center 0
+  background-size 1192px 797px
+  position fixed
+  z-index -1
+  left 0
+  right 0
+  top 0px
+  margin-left auto
+  margin-right auto
+
+
+
+
+@media (min-width: 320px)
+  .actions_report_exp
+    //width auto
+    //margin 35px -6px 0 -281px
+    width 100%
+    left 0
+    margin 35px 0 0 0
+    display none
+    &.report-acc-profile
+      margin 35px 0px 0 0
+      width 100%
+  /*.exp-feat
+    width 100%*/
+  .name-profile_featured
+    width 276px
+    //width auto
+  .themmes-tag
+    font-size 18px
+  .style-radio-sider
+    font-size 16px
+  .overlay
+    &.middle
+      width 46%
+      left 168px
+      display block
+  .bg2_page
+    background white
+  .cnt-btn-with-rrss
+    width 310px
+    margin auto
+    color #3B4244
+    text-align center
+    font-size 16px
+  .bg-img-login
+    display none
+  .cnt-div-login
+    width 100%
+    margin 0px auto
+    padding 21px 15px
+  .glass_search
+    margin 23px -13px 0 0
+  .btn-publish
+    width 100%
+    padding 0 0px
+  .btn-cancel_clean
+    width 100%
+    padding 0 4%
+    margin 0
+  .textarea-comment
+    display none
+    margin 20px 0  0 0
+    textarea
+      border 1px solid #E3E3E3
+      width 100%
+      padding 2%
+      height 80px
+      border-radius 4px 
+      resize none
+    textarea:focus
+        outline none
+      
+  .cnt_display_textarea
+    margin -10px 0 5px 0
+    background white
+    padding 20px 0px 10px 0px
+    overflow hidden
+    text-align center
+    .form_express
+      background #D1DBDB
+      margin 0 0 10px 0
+      padding 8px
+      overflow hidden
+      
+      textarea
+        border 0
+        width 100% //81% !important
+        //height 60px !important//height auto
+        padding 3px 2%
+        font-size 16px
+        margin 2px 0 0px 0
+        resize none
+        //transition all 0.1s ease
+      textarea:focus
+        outline none
+        
+  .cnt_form_register
+    background white
+    float left
+    width 81%
+    overflow hidden
+        
+  .text_terms_conditions
+    float left
+    font-size 12px
+    margin 5px 0 0 0 
+    width 100%
+    text-align center
+      
+  .dates_extra
+    display none
+    font-size 14px
+    color #869196
+    border 1px solid #e2e2e2
+    padding 20px 0
+    margin 7px 15px 15px 15px
+    &.dates_comment
+      margin 0
+  
+  .div-logo
+    margin 12px 0 8px 15px
+    width 100%
+  .text-18
+    font-size 16px
+  .bg-img-banner
+    background url(../images/banner_m.gif) no-repeat right bottom
+    background-size 135px 92px
+    width 100%
+    height 100%
+    line-height 19px
+  .bg-img-banner-brands
+    background url(../images/banner-brands-m.gif) no-repeat right bottom
+    background-size 135px 108px
+    width 100%
+    height 100%
+    line-height 19px
+  .bg-img-banner-knowledge
+    background url(../images/banner-knowledge-m.gif) no-repeat right bottom
+    background-size 135px 108px
+    width 100%
+    height 100%
+    line-height 19px
+  .close_banner
+    margin 10px 12px 0 0
+  .text-20
+    font-size 18px
+  .cnt-btn-publish
+    margin 14px 0 0 0px
+    padding 7px 12px
+  .cnt-col-aside
+    width 100%
+    margin 0 auto
+  .content-description-exp-img
+    width 62%
+    height 83px
+  .img-cont-exp
+    width 98px
+    height 69px
+    margin 13px 0  0 0px
+    img
+      border-radius 4px
+  .text-cut-points2
+    height 80px
+  .btn-more-themmes
+    margin 0
+    width 40px
+    a
+      padding 0 10px
+  .cnt-themmes_featured
+    width 100%
+    margin 0
+  .btn-scroll
+    margin 0 15px
+    padding 0
+    display flex
+    overflow-x scroll
+    -webkit-overflow-scrolling touch
+    &.scroll-exp-feat
+      margin 0 15px 20px 15px
+  .btn-scroll::-webkit-scrollbar
+    display none
+      
+  .title_themmes_featured
+    background none
+    padding 0 0 0 15px
+    margin  0 0 5px 0
+    color #869196
+    font-size 14px
+  .themmes-tag
+    margin 30px 0 0 0
+  .padding-top-30
+    padding 10px 0 0 0
+  .btn_exp_ques
+    margin 13px 15px 8px 15px
+  .cnt-detail-file
+    padding 0
+    margin 0
+  .cnt-more_feature
+    padding 0
+  .padding-detail-file
+    padding 10px 15px
+  .text-24
+    font-size 20px
+    line-height 25px
+  .text-16
+    font-size 14px
+  .text-banner-index
+    font-size 16px
+  .padding-btn-comm
+    padding 20px 15px 10px 15px
+  .text-28-cantact
+    font-size 24px  
+  .padding-btn-comm-2
+    padding 20px 0px 10px 0px
+  .align-right-center
+    text-align center
+  .padding-exp-main
+    padding 10px 15px 15px 15px
+  .padding-no-exp
+    padding 15px 20px
+    margin 0 0 40px 0
+  
+@media (min-width: 576px)
+  .actions_report_exp
+    width 335px
+    left auto
+    margin 35px 0px 0 -284px
+    &.report-acc-profile
+      margin 35px 0px 0 -325px
+      width 335px
+    &.filter_brands
+      width 270px
+      margin 35px 0 0 -100px
+      padding 5px 0 0 0
+  .overlay
+    &.middle
+      display none
+  .cnt-btn-with-rrss
+    width 315px
+  .cnt_btns_center_message
+    width 40%
+    margin 40px auto
+  .btn_no_bg
+    width 130px
+  .btn-publish
+    width 107px
+    padding 0
+    margin 0px auto
+    float right
+  &.send_solicitude
+    width auto
+    color white
+    cursor pointer
+  .cnt_display_textarea
+    .form_express
+      textarea
+        width 90%
+  .btn-burger
+    margin 28px 20px 0 0
+  .glass_search
+    margin 0 10px 0 0
+  .cnt-search
+    input
+      width 90%
+      padding 0 12% 0 5%
+  
+  .cnt-btn-publish
+    margin 20px 0 0 0
+  .content-description-exp-img
+    width 80%
+    height 104px
+  .cnt-col-aside
+    width 100%
+    background #d7e6fa
+    .banner-aside
+      width 336px
+      margin auto
+  .div-logo
+    width 89%
+  .padding-btn-comm
+    padding 0 0 0 0
+  .text-28-cantact
+    font-size 28px
+  .padding-btn-comm-2
+    padding 0px 0px 0px 0px
+  .align-right-center
+    text-align right
+    
+@media (min-width: 768px)
+  .glass_search
+    margin 0 -5px 0 0
+  .cnt_display_textarea
+    .form_express
+      textarea
+        width 85%
+  .cnt-search
+    input
+      width 98%
+  .div-logo
+    //padding 9px 0
+    width 180px
+    margin 9px auto
+  .cnt-btn-publish
+    margin 20px 0 0 35px
+    padding 7px 18px
+  .bg-img-banner
+    background url(../images/banner.gif) no-repeat 380px bottom
+    background-size 664px 141px 
+    width 100%
+    height 131px
+    line-height 19px
+  .bg-img-banner-brands
+    background url(../images/banner-brands-d.gif) no-repeat 380px bottom
+    background-size 664px 141px 
+    width 100%
+    height 131px
+    line-height 19px
+  .bg-img-banner-knowledge
+    background url(../images/banner-knowledge-d.gif) no-repeat 380px bottom
+    background-size 664px 141px 
+    width 100%
+    height 131px
+    line-height 19px
+  .close_banner
+    margin 10px 0 0 0
+  .text-20
+    font-size 20px
+  .content-description-exp-img
+    width 72%
+  .text-cut-points2
+    height 83px
+  .title_themmes_featured
+    background #DCEBFA
+    color #4499D8
+    font-size 16px
+    padding 7px 0 7px 14px
+    border-radius 4px
+    margin 0 0 10px 0
+    &.title_order
+      margin 0 0 5px 0
+  .cnt-col-aside
+    width 336px
+    background none
+    margin 44px 0 0 0px
+  .cnt-detail-file
+    padding 0px
+    margin 44px 0 0 0
+  .line-height-20
+    line-height 20px
+  .text-banner-index
+    font-size 20px
+  .padding-exp-main
+    padding 30px 35px 35px 35px
+  .padding-no-exp
+    padding 50px 15px 50px 15px
+    margin 0 0 40px 0
+    
+
+@media (min-width: 992px)
+  .themmes-tag
+    font-size 16px
+  .style-radio-sider
+    font-size 14px
+  .bg-img-login
+    display initial
+  .bg-img-banner
+    background url(../images/banner.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 100%
+    height 141px
+  .bg-img-banner-brands
+    background url(../images/banner-brands-d.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 100%
+    height 141px
+  .bg-img-banner-knowledge
+    background url(../images/banner-knowledge-d.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 100%
+    height 141px
+  .text-cut-points2
+    height 80px
+  .content-description-exp-img
+    width 272px
+  .img-cont-exp
+    width 94px
+    height 65px
+  .margin-right-10
+    margin 0
+  .cnt-themmes_featured
+    width 225px
+    float right
+    margin 24px 25px 0 0
+  .btn-more-themmes
+    margin 0 0 30px 0
+  .themmes-tag
+    margin 5px 0 0 0
+  .text-24
+    font-size 24px
+    line-height 29px
+  .text-16
+    font-size 16px
+  .btn-scroll
+    padding  0
+    margin 0
+    display contents
+    &.scroll-exp-feat
+      display inline-flex
+      margin 0 0 30px 0
+  
+    
+@media (min-width: 1200px)
+  .cnt_form_register
+    width 92%
+  .name-profile_featured
+    width auto !important
+  .bg2_page
+    background #f5f7f7
+  .cnt-div-login
+    width 680px
+    margin 30px auto
+    padding 30px 175px
+  
+  .dates_extra
+    margin 20px 0 20px 0
+    padding 30px 0 20px 0
+    &.dates_comment
+      margin 20px 0
+      padding 30px 0 20px 0
+  .btn-publish
+    width 107px
+    margin 0
+    padding 0
+    margin 0px auto
+    float right
+  &.send_solicitude
+    width auto
+    color white
+    cursor pointer
+  .btn-cancel_clean
+    width 75px
+    margin 10px 50px 0 0
+    padding 0
+    float right
+    a
+      padding 0
+      border 0
+  .cnt_display_textarea
+    padding 0 70px 30px 70px
+    text-align left
+    .form_express
+      border-radius 4px
+      margin 0 0 0 0
+      textarea
+        width 100%
+  .text_terms_conditions
+    width 60% !important
+    margin 15px 0 0 0 !important
+    text-align left !important
+  .bg-img-banner
+    background url(../images/banner.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 1275px
+    height 141px
+    line-height 28px
+  .bg-img-banner-brands
+    background url(../images/banner-brands-d.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 1275px
+    height 141px
+    line-height 28px
+  .bg-img-banner-knowledge
+    background url(../images/banner-knowledge-d.gif) no-repeat right bottom
+    background-size 664px 141px
+    width 1275px
+    height 141px
+    line-height 28px
+  .text-cut-points2
+    height 100px
+  .content-description-exp-img
+    width 358px
+  .img-cont-exp
+    width 140px
+    height 90px
+    margin 12px 0 0 0
+  .cnt-col-aside
+    margin 44px 0 0 35px
+  .cnt-themmes_featured
+    width 225px
+    float right
+    margin 44px 35px 0 0
+  .cnt-more_feature
+    padding 0 0 0 70px
+  .cnt-detail-file
+    padding 0 0 0 75px
+    margin 44px 0 0 0
+  .padding-detail-file
+    padding 30px 70px 50px 70px

@@ -1,0 +1,58 @@
+@media (min-width: 320px)
+	.cnt_select_channel
+		width 100%
+	.cnt_btns_channnel_type
+		display flex
+		overflow-x scroll
+		-webkit-overflow-scrolling touch
+		padding 0 0 100px 0
+		margin 0 15px
+	.cnt_btns_channnel_type::-webkit-scrollbar
+		display none
+	.cnt_border_btn
+		-webkit-box-shadow 0px 0px 8px -1px #cacaca
+		box-shadow 0px 0px 8px -1px #cacaca
+		border-radius 4px
+		width auto
+		margin 4px 10px 4px 4px
+		//height 340px
+		background white
+		a
+			padding 30px 10px
+			width 100%
+			display inline-block
+			text-decoration none !important
+			color #343a40 !important
+			&:hover
+				-webkit-box-shadow 0px 0px 8px -1px #cacaca
+				box-shadow 0px 0px 8px -1px #cacaca
+	.cnt_border_btn:last-child
+		margin 4px
+	.txt-leyend-channel
+		padding 20px 0 0 15px
+	
+@media (min-width: 576px)
+	.col-sm-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 31%;
+  }
+
+@media (min-width: 768px)
+	.cnt_select_channel
+		width 800px
+		margin 0 auto
+	.cnt_btns_channnel_type
+		display inline-flex
+		overflow-x hidden
+		width 100%
+		margin 0
+	.cnt_border_btn
+		margin-right 8px
+	.txt-leyend-channel
+		padding  50px 0 50px 50px
+	.col-md-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 32%;
+   }

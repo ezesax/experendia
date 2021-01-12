@@ -63194,7 +63194,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Ezequiel\Projects\Experendia\experendia-backend\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\experendia-master-2\experendia\resources\js\app.js */"./resources/js/app.js");
 
 
 /***/ })

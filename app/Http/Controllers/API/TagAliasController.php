@@ -12,6 +12,8 @@ use App\TagTree;
 use App\TagSearch;
 use App\Tag;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 
 class TagAliasController extends Controller
 {
@@ -23,6 +25,7 @@ class TagAliasController extends Controller
     public function index($tag_tree)
     {
         //
+
         return TagAliasResource::collection(
             TagAlias::where('tag_tree_id', $tag_tree)->get()
         );
@@ -36,37 +39,138 @@ class TagAliasController extends Controller
      */
     public function store(CreateTagAliasRequest $request, $tag_tree)
     {
-        //
-        $tagTree = TagTree::findOrFail($tag_tree);
-        $tagTree->aliases()->delete();
-        $tagName = Tag::findOrFail($tagTree->tag_id)->name;
-        TagSearch::where('tag_tree_id', $tag_tree)->where('tag', '!=', $tagName)->delete();
 
+        $tagTree = TagTree::findOrFail($tag_tree);
+        $i=0;
+
+        //llamada para el proceso almacenado
         $data = $request->validated();
-        $aliases = explode(';',  $data['name']);
         $alias_array = [];
         $data['alias'] = TagAlias::max('alias') + 1;
+        $aliases = explode(';',  $data['name']);
+
+        //Ciclo para ajustar las actualizaciones
+        // foreach ($aliases as $alias)
+        // {
+        //     $data1 = DB::select('CALL svc_alias(?, ?)',[$tagTree->tag_id,$alias]);
+
+        //     if (( strcmp ($request->antiguo[$i]['name'], $alias ) == 0) && ( count($data1) != 0)) {
+        //         echo "entro en el si";
+        //     }else{
+        //        $actualizar = TagAlias::all()->where('id','=',$request->antiguo[$i]['id'])->first();
+        //        $actualizar->name = $alias;
+        //        $actualizar->save();
+        //        $i = $i + 1;
+        //     }
+
+        // }
+            $i = 0;
+
+        // foreach ($request->antiguo as $antiguo)
+        // {
+        //     if (( strcmp ($request->antiguo[$i]['name'], $aliases ) == 0)) {
+        //         $i = $i + 1;
+        //     }else{
+        //         $actualizar = TagAlias::all()->where('id','=',$request->antiguo[$i]['id'])->first();
+        //                   $actualizar->name = $aliases[$i];
+        //                   $actualizar->update();
+        //     }
+
+        //     $i = $i + 1;
+        // }
+        // return true;
+        if(count($request->antiguo) == count($aliases) ){
         foreach ($aliases as $alias)
         {
-            $alias_array[] = new TagAlias([
-                "name" => $alias,
-                "alias" => $data['alias'],
-                "status" => $data['status']
-            ]);
+
+            if (( strcmp ($request->antiguo[$i]['name'], $alias ) == 0)) {
+           //     echo "entro porque son iguales $request->antiguo[$i]";
+                echo"entro porque son iguales $alias";
+                $i = $i + 1;
+            } else{
+                // $data1 = DB::select('CALL svc_alias(?, ?)',[$tagTree->tag_id,$alias]);
+
+
+                // //Si data es vacio comprueba que no esta guardado en la base de datos
+                //     if((empty($data1))){
+                //         print"entro en el si";
+
+                //         $alias_array[] = new TagAlias([
+                //             "name" => $alias,
+                //             "alias" => $data['alias'],
+                //             "status" => $data['status']
+                //         ]);
+                //         $i = $i + 1;
+                //      }else{
+
+                // print "entro en el sino $aliases\n";
+                    //actualiza el alias
+                           $actualizar = TagAlias::all()->where('id','=',$request->antiguo[$i]['id'])->first();
+                          $actualizar->name = $alias;
+                          $actualizar->update();
+                    //actualiza el seach del alias
+
+                          $i= $i + 1;
+                          $actualizar1 = TagSearch::where('tag_tree_id', $tag_tree)->where('tag', '!=', $alias)->first();
+                          return $actualizar1;
+
+                    //   $alias_array1[] = new TagAlias([
+                    //       "name" => $alias,
+                    //       "alias1" => $data['alias'],
+                    //       "status" => $data['status']
+                    //   ]);
+                  //}
+                }
         }
+    }else{
+        foreach ($aliases as $alias){
+         $data1 = DB::select('CALL svc_alias(?, ?)',[$tagTree->tag_id,$alias]);
 
-        $tagTree->aliases()->saveMany($alias_array);
-        foreach ($alias_array as $alias){
-            TagSearchJob::dispatchNow($tagTree->id, $alias->name);
-        }
 
-        $tagTree->load('aliases');
-        return response()->json([
-            'created'   => true,
-            'response'  => new TagTreeResource($tagTree)
-        ]);
+                // //Si data es vacio comprueba que no esta guardado en la base de datos
+                     if((empty($data1))){
+                         print"entro en el si";
 
+                         $alias_array[] = new TagAlias([
+                             "name" => $alias,
+                             "alias" => $data['alias'],
+                             "status" => $data['status']
+                         ]);
     }
+}
+
+         // $tagTree->aliases()->delete();
+         return $tagTree;
+          $tagName = Tag::findOrFail($tagTree->tag_id)->name;
+          TagSearch::where('tag_tree_id', $tag_tree)->where('tag', '!=', $tagName)->delete();
+
+        //   $data = $request->validated();
+        //   $aliases = explode(';',  $data['name']);
+        //   $alias_array = [];
+        //   $data['alias'] = TagAlias::max('alias') + 1;
+
+        //   foreach ($aliases as $alias)
+        //   {
+        //       $alias_array[] = new TagAlias([
+        //           "name" => $alias,
+        //           "alias" => $data['alias'],
+        //           "status" => $data['status']
+        //       ]);
+        //   }
+
+          $tagTree->aliases()->saveMany($alias_array);
+
+          foreach ($alias_array as $alias){
+              TagSearchJob::dispatchNow($tagTree->id, $alias->name);
+          }
+          $tagTree->load('aliases');
+          return response()->json([
+              'created'   => true,
+              'response'  => new TagTreeResource($tagTree)
+          ]);
+
+        }
+  }
 
     /**
      * Display the specified resource.
@@ -77,6 +181,7 @@ class TagAliasController extends Controller
     public function show($tag_tree, $tag_alias)
     {
         //
+        return "entro en el metodo show";
         $item = TagAlias::findOrFail($tag_alias);
         if($item->tag_tree_id != $tag_tree)
         {
@@ -103,7 +208,7 @@ class TagAliasController extends Controller
      */
     public function update(EditTagAliasRequest $request, $tag_tree, $tag_alias)
     {
-        //
+        return "entro en el actualizar";
         $tagAlias = TagAlias::where('id', $tag_alias)
             ->where('tag_tree_id', $tag_tree)
             ->get()

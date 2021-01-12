@@ -873,11 +873,13 @@ __webpack_require__.r(__webpack_exports__);
       parentId: null,
       aliases: [],
       aliasName: undefined,
+      aliasNameAntiguo: undefined,
       treeAlias: undefined,
       dialogAlias: false,
       activeTag: '',
       id: null,
       name: "",
+      antiguo: "",
       description: "",
       keywords: "",
       tag_type: [],
@@ -1078,9 +1080,11 @@ __webpack_require__.r(__webpack_exports__);
     toggleAlias: function toggleAlias(item) {
       var _this6 = this;
 
+      console.log("entro en el metodo");
       this.$api.request.get("/admin/tags_tree/".concat(item.id, "/tag_aliases")).then(function (res) {
         _this6.activeTag = item.tags.name;
         _this6.aliases = res.data.data;
+        _this6.aliasNameAntiguo = res.data.data;
         _this6.treeAlias = item.id;
         _this6.dialogAlias = true;
         _this6.aliasName = res.data.data.map(function (e) {
@@ -1166,9 +1170,11 @@ __webpack_require__.r(__webpack_exports__);
       event.preventDefault();
       this.$api.request.post("/admin/tags_tree/".concat(this.treeAlias, "/tag_aliases"), {
         name: this.aliasName,
+        antiguo: this.aliasNameAntiguo,
         status: "Activo"
       }).then(function (res) {
         _this9.aliasName = null;
+        _this9.aliasNameAntiguo = null;
         _this9.dialogAlias = false;
 
         _this9.getTags();
@@ -1939,7 +1945,7 @@ var render = function() {
       _c(
         "v-dialog",
         {
-          attrs: { width: "600" },
+          attrs: { width: "700" },
           model: {
             value: _vm.dialogAlias,
             callback: function($$v) {
@@ -2005,7 +2011,7 @@ var render = function() {
                   return _c("v-list-item", { key: alias.id }, [
                     _vm._v(
                       "\n                    " +
-                        _vm._s(index + 1 + "  " + alias.name) +
+                        _vm._s(index + 1 + ")  " + alias.name) +
                         "\n                "
                     )
                   ])
@@ -2169,7 +2175,7 @@ var render = function() {
                                                     ]
                                                   ),
                                                   _vm._v(
-                                                    "\n                                        Alias\n                                    "
+                                                    "\n                                        Alias 1\n                                    "
                                                   )
                                                 ],
                                                 1
@@ -2464,7 +2470,7 @@ var render = function() {
                                                                       .length
                                                                   : 0
                                                               ) +
-                                                              ")  \n                                            "
+                                                              ")\n                                            "
                                                           )
                                                         ]
                                                       )
@@ -2870,7 +2876,7 @@ var render = function() {
                                                                           .length
                                                                       : 0
                                                                   ) +
-                                                                  ")  \n                                                "
+                                                                  ")\n                                                "
                                                               )
                                                             ]
                                                           )

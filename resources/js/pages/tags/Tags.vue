@@ -100,7 +100,7 @@
                 </v-card>
             </template>
         </v-dialog>
-        <v-dialog v-model="dialogAlias" width="600">
+        <v-dialog v-model="dialogAlias" width="700">
             <v-card>
                 <v-card-title>Alias - {{activeTag}}</v-card-title>
                 <v-form ref="form" @submit="saveAlias($event)">
@@ -121,7 +121,7 @@
                         v-for="(alias, index) in aliases"
                         :key="alias.id"
                     >
-                        {{ `${index + 1}  ${alias.name}` }}
+                        {{ `${index + 1})  ${alias.name}` }}
                     </v-list-item>
                 </v-list>
             </v-card>
@@ -162,7 +162,7 @@
                                     <v-list>
                                         <v-list-item @click="toggleAlias(tag)">
                                             <v-icon size="small" color="blue" left>fas fa-check-circle</v-icon>
-                                            Alias
+                                            Alias 1
                                         </v-list-item>
 
                                         <v-list-item
@@ -223,7 +223,7 @@
                                                     <!-- nombre -->
                                                     {{ children.tags.name }}
                                                     <!-- childrens count -->
-                                                    ({{children.children ? children.children.length : 0}})  
+                                                    ({{children.children ? children.children.length : 0}})
                                                 </span>
                                             </template>
                                             <span>
@@ -270,8 +270,8 @@
                                                     Eliminar
                                                 </v-list-item>
                                             </v-list>
-                                        </v-menu>     
-                                    </v-chip>    
+                                        </v-menu>
+                                    </v-chip>
                                 </div>
                             </v-list-item-content>
                         </v-list-item>
@@ -303,7 +303,7 @@
                                                         <!-- nombre -->
                                                         {{ c.tags.name }}
                                                         <!-- childrens count -->
-                                                        ({{c.children ? c.children.length : 0}})  
+                                                        ({{c.children ? c.children.length : 0}})
                                                     </span>
                                                 </template>
                                                 <span>
@@ -385,11 +385,13 @@ export default {
         parentId: null,
         aliases: [],
         aliasName: undefined,
+        aliasNameAntiguo:undefined,
         treeAlias: undefined,
         dialogAlias: false,
         activeTag: '',
         id: null,
         name: "",
+        antiguo:"",
         description: "",
         keywords: "",
         tag_type: [],
@@ -592,14 +594,17 @@ export default {
             this.$data.tag_type = [];
         },
         toggleAlias(item) {
+            console.log("entro en el metodo");
             this.$api.request
                 .get(`/admin/tags_tree/${item.id}/tag_aliases`)
                 .then(res => {
                     this.activeTag = item.tags.name
                     this.aliases = res.data.data;
+                    this.aliasNameAntiguo = res.data.data;
                     this.treeAlias = item.id;
                     this.dialogAlias = true;
                     this.aliasName = res.data.data.map(e => e.name).join(";");
+
                 })
                 .catch(err => console.log(err));
         },
@@ -664,13 +669,16 @@ export default {
         },
         saveAlias(event) {
             event.preventDefault();
+
             this.$api.request
                 .post(`/admin/tags_tree/${this.treeAlias}/tag_aliases`, {
                     name: this.aliasName,
+                    antiguo : this.aliasNameAntiguo,
                     status: "Activo"
                 })
                 .then(res => {
                     this.aliasName = null;
+                    this.aliasNameAntiguo = null;
                     this.dialogAlias = false;
                     this.getTags();
                 })
